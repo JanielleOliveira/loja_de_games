@@ -23,7 +23,7 @@ export class Produto {
   @Column({ type: 'int', nullable: true })
   estoque: number;
 
-  @ManyToOne(() => Categoria, (categoria) => categoria.produtos, {
+  @ManyToOne(() => Categoria, (categoria) => categoria.produto, {
     onDelete: 'RESTRICT',
     onUpdate: 'CASCADE',
   })
